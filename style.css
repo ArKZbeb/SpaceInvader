@@ -1,0 +1,311 @@
+body {
+    background: #252839;
+    color: white;
+    margin: 0;
+    font-family: 'system-ui', sans-serif;
+}
+
+img {
+    width: 100%;
+}
+
+.fa-solid {
+    color: white;
+}
+
+#grade {
+    width: 690px;
+    height: 690px;
+    border: 1px solid black;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    background-image: url("assets/background-black.png");
+    animation: background-defile 2s linear infinite;
+}
+
+@keyframes background-defile {
+    from {
+        background-position-y: 0px;
+    }
+    to {
+        background-position-y: 256px;
+    }
+}
+
+#grade div {
+    width: 43px;
+    height: 30px;
+    position: relative;
+}
+
+.text_soundoff {
+    display: flex;
+    font-size: 40px;
+    color:rgb(223, 73, 223);
+    padding-top: 20%;
+    position: relative;
+    flex-direction: row;
+}
+
+.flex_row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.flex_column2 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0%;
+    padding-top: 5%;
+}
+.margin {
+    margin-left: 5px;
+    margin-top: -185px;
+    padding-top: 20%;
+    padding-left: 10%;
+}
+
+.text_infos {
+    padding-bottom: 50%;
+    padding-right: 80%;
+}
+
+.button_infos{
+    display: flex;
+    font-size: 30px;
+    color:rgb(223, 73, 223);
+    padding-top: 20%;
+    position: relative;
+    flex-direction: row;
+}
+
+.button {
+    padding: 15px 50px;
+    margin: 10px 4px;
+    color: #ffffff;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    border: 1px solid transparent;
+    -webkit-transition: all 0.4s cubic-bezier(0.5, 0.24, 0, 1);
+    transition: all 0.4s cubic-bezier(0.5, 0.24, 0, 1);
+}
+
+.button::before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    z-index: -1;
+    width: 0%;
+    height: 1px;
+    background: rgb(223, 73, 223);
+    box-shadow: inset 0px 0px 0px #383d52;
+    display: block;
+    -webkit-transition: all 0.4s cubic-bezier(0.5, 0.24, 0, 1);
+    transition: all 0.4s cubic-bezier(0.5, 0.24, 0, 1);
+}
+
+.button:hover::before {
+    width: 100%;
+}
+.button::after {
+    content: "";
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    z-index: -1;
+    width: 0%;
+    height: 1px;
+    background: rgb(223, 73, 223);
+    -webkit-transition: all 0.4s cubic-bezier(0.7, 0.25, 0, 1);
+    transition: all 0.4s cubic-bezier(0.7, 0.25, 0, 1);
+}
+
+.button:hover::after {
+    width: 100%;
+}
+.button:hover {
+    border-left: 1px solid rgb(223, 73, 223);
+    border-right: 1px solid rgb(223, 73, 223);
+}
+
+.ship {
+    background: url("assets/spaceship.png") no-repeat;
+    background-size: contain;
+}
+
+.ennemy {
+    background: url("assets/ennemies.png") no-repeat;
+    background-size: contain;
+}
+
+.shoot_red {
+    background: url("assets/shoot_red.png") no-repeat;
+    background-size: contain;
+}
+.shoot_blue {
+    background: url("assets/shoot_blue.png") no-repeat;
+    background-size: contain;
+}
+.shoot_yellow {
+    background: url("assets/shoot_yellow.png") no-repeat;
+    background-size: contain;
+}
+.shoot_green {
+    background: url("assets/shoot_green.png") no-repeat;
+    background-size: contain;
+}
+
+.tirEnnemy {
+    background: url("assets/shoot_purple.png") no-repeat;
+    background-size: contain;
+}
+
+.boom {
+    background: url("assets/boom.gif") no-repeat;
+    background-size: contain;
+}
+
+/* =============== Volume ===============*/
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    margin-right: 25%;   
+    padding-top: 40%;
+    
+}
+
+.player {
+    width: 20em;
+    color: #fff;
+    margin-left: 5em;
+    background: #333;
+    border-radius: 8px;
+    padding: 1em;
+    box-shadow: 0 0 15px #1f1f1f;
+    margin-right: 5%;
+}
+
+.player span, .player small {
+    color: #ccc;
+}
+
+.player h2 {
+    margin: 0.3em 0 0 0;
+}
+
+.cover {
+    position: relative;
+}
+
+.player img {
+    width: 100%;
+}
+
+.knob-container::before {
+    content: '';
+    position: absolute;
+    background: linear-gradient(0deg, #525252 0%, #373737 100%);
+    width: 10em;
+    height: 10em;
+    border-radius: 50%;
+    box-shadow: 0px -20px 20px #757575, 0px 20px 35px #111111, inset 0px 5px 6px #979797, inset 0px -5px 6px #242424;
+}
+
+
+
+.knob {
+    width: 10em;
+    height: 10em;
+    position: relative;
+
+}
+
+.knob::before,
+.knob::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+}
+
+.knob::before {
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    box-shadow: 0px 0px 10px #ff3686;
+}
+
+.knob::after {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 3px solid #fff;
+    width: 130%;
+    height: 130%;
+    box-shadow: 0px 0px 10px #ff3686, inset 0px 0px 10px #ff3686;
+}
+
+.progress {
+    width: 100%;
+    height: 6px;
+    box-shadow: inset -2px -2px #888, inset 2px 2px #111;
+    background: #333;
+    position: relative;
+}
+
+.progress > div {
+    background: #fff;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 0%; /*Change to 0*/
+    box-shadow: 0px 0px 10px #ff3686;
+}
+
+.wrapper {
+    text-align: center;
+    width: 100%;
+    position: relative;
+
+}
+
+#gg{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-right: 35%;
+}
+
+/*=== Responsive Design ===*/
+
+@media screen and (max-width: 800px) {
+    .knob-container {
+        font-size: 13px;
+    }
+    .container {
+        flex-direction: column;
+    }
+    .player {
+        margin: 0 0 5em 0;
+    }
+    .player img {
+        height: 10em;
+        object-fit: cover;
+    }
+}
+
+
